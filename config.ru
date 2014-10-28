@@ -1,2 +1,2 @@
-require_relative 'app'
-run Sinatra::Application
+require_relative 'catch_a_ride'
+run CatchARide
