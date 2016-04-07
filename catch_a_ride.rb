@@ -4,7 +4,7 @@ require 'active_support/core_ext/numeric/time'
 
 class CatchARide < Sinatra::Base
   if ENV['RACK_ENV'] == 'production'
-    set :cache, Sinatra::Cache::RedisStore.new(ENV['REDISTOGO_URL'])
+    set :cache, Sinatra::Cache::RedisStore.new(ENV['REDIS_URL'])
   else
     register Sinatra::Cache
   end
